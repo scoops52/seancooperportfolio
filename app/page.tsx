@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LaptopsSlides from "./components/LaptopsSlides";
+import MobileSlides from "./components/MobileSlides";
 
 export default function Home() {
   return (
@@ -21,18 +22,18 @@ export default function Home() {
                 height={50}
               />
               <div className="absolute top-0 left-0 w-full h-80 flex justify-center items-center">
-                <LaptopsSlides />
+                {/* <LaptopsSlides /> */}
               </div>
             </div>
             <div className="relative ">
               <Image
-                src="/phoneScreen.png"
+                src="/MILOLoginScreenSim2.png"
                 alt="laptop and mobile phone"
                 width={150}
                 height={500}
               />
               <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-                <LaptopsSlides />
+                {/* <MobileSlides /> */}
               </div>
             </div>
           </div>

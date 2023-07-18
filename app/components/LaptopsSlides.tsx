@@ -13,28 +13,52 @@ function LaptopsSlides() {
     setSlides(slides === 0 ? 3 : slides - 1);
   };
 
-  // useEffect(() => {
-  //     const interval = setInterval(() => {
-  //         nextSlide()
-  //     }, 3000)
-  //     return () => clearInterval(interval)
-  // })
+  useEffect(() => {
+      const interval = setInterval(() => {
+          nextSlide()
+      }, 3000)
+      return () => clearInterval(interval)
+  })
 
   return (
     <>
       {slides === 0 && (
         <Image
-          src="/TaskrScreen.png"
+          src="/TaskrScreenShort.png"
           alt="Taskr Web App"
           width={480}
           height={200}
           style={{ objectFit: "contain" }}
         />
       )}
-      {slides === 1 && <h1 className="text-black">Pic 2</h1>}
-      {slides === 2 && <h1 className="text-black">Pic 3</h1>}
-      {slides === 3 && <h1 className="text-black">Pic 4</h1>}
-      </>
+      {slides === 1 && (
+        <Image
+          src="/LizScreenShort.png"
+          alt="LizzyMeg.com screen"
+          width={480}
+          height={200}
+          style={{ objectFit: "contain" }}
+        />
+      )}
+      {slides === 2 && (
+        <Image
+          src="/seanScreenShort.png"
+          alt="SeanCooper.com screen"
+          width={480}
+          height={200}
+          style={{ objectFit: "contain" }}
+        />
+      )}
+      {slides === 3 && (
+        <Image
+          src="/watchrScreenShort.png"
+          alt="Watchr App screen"
+          width={480}
+          height={200}
+          style={{ objectFit: "contain" }}
+        />
+      )}
+    </>
   );
 }
 
