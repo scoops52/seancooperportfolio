@@ -9,7 +9,7 @@ function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const navItems = ["about", "portfolio", "skills", "contact"]
   return (
-    <header className='bg-gray-200 text-gray-900 font-raleway py-4 fixed top-0 left-0 right-0 z-10'>
+    <header className=' bg-gray-200 text-gray-900 font-raleway py-4 fixed top-0 left-0 right-0 z-10'>
         <nav className='container mx-auto flex justify-between items-center'>
             <div className='flex items-center'>
                 <Link href='/'>
