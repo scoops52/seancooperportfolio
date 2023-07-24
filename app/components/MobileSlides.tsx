@@ -6,11 +6,11 @@ function MobileSlides() {
   const [slides, setSlides] = useState(0);
 
   const nextSlide = () => {
-    setSlides(slides === 3 ? 0 : slides + 1);
+    setSlides(slides === 1 ? 0 : slides + 1);
   };
 
   const prevSlide = () => {
-    setSlides(slides === 0 ? 3 : slides - 1);
+    setSlides(slides === 0 ? 1 : slides - 1);
   };
 
   useEffect(() => {
@@ -36,9 +36,9 @@ function MobileSlides() {
       )}
       {slides === 1 && (
         <Image
-          src="/MILODashboardScreen3.PNG"
+          src="/milo-phone-mock.png"
           alt="LizzyMeg.com screen"
-          width={140}
+          width={150}
           height={0}
           className="rounded-xl"
         />
@@ -52,15 +52,15 @@ function MobileSlides() {
           className="rounded-xl"
         />
       )} */}
-      {slides === 2 && (
+      {/* {slides === 2 && (
         <Image
-          src="/TaskrMobileDarkScreen.PNG"
+          src="/TaskrMobileScreen3.png"
           alt="Watchr App screen"
-          width={140}
+          width={160}
           height={0}
           className="rounded-xl"
         />
-      )}
+      )} */}
     </>
   );
 }
