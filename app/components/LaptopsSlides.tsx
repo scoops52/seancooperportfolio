@@ -29,6 +29,7 @@ function LaptopsSlides() {
           width={480}
           height={200}
           style={{ objectFit: "contain" }}
+          priority={true}
         />
       )}
       {slides === 1 && (
@@ -38,6 +39,7 @@ function LaptopsSlides() {
           width={480}
           height={200}
           style={{ objectFit: "contain" }}
+          priority={true}
         />
       )}
       {slides === 2 && (
@@ -47,6 +49,7 @@ function LaptopsSlides() {
           width={480}
           height={200}
           style={{ objectFit: "contain" }}
+          priority={true}
         />
       )}
       {slides === 3 && (
@@ -56,6 +59,7 @@ function LaptopsSlides() {
           width={480}
           height={200}
           style={{ objectFit: "contain" }}
+          priority={true}
         />
       )}
     </>
