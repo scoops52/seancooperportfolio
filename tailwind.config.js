@@ -17,6 +17,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'liz-card': 'url("/LizCardBg.png")',
+        'taskr-web-card': 'url("/TaskrWebCard.png")',
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],

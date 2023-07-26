@@ -1,15 +1,33 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const navItems = ["about", "portfolio", "skills", "contact"]
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 100; // Adjust this value to change when the header becomes transparent
+
+      // Update the state based on the scroll position
+      setIsTransparent(scrollY > threshold);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup: remove the event listener when the component unmounts
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className=' bg-gray-200 text-gray-900 font-raleway py-4 fixed top-0 left-0 right-0 z-10'>
+    <header className={` bg-gray-200 text-gray-900 font-raleway py-4 fixed top-0 left-0 right-0 z-10 ease-in-out duration-500 ${isTransparent ? "bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50" : ""} `}>
         <nav className='container mx-auto flex justify-between items-center'>
             <div className='flex items-center'>
                 <Link href='/'>
@@ -25,7 +43,7 @@ function Header() {
             <ul className='flex items-center'>
                 {navItems.map((item, index) => (
                     <li key={index} className='mx-4 hover:text-gray-300'>
-                        <Link href={`/${item}`}>{item}</Link>
+                        <Link href={`#${item}`}>{item}</Link>
                     </li>
                 ))}
                 <li className='mx-4 hover:text-gray-300'>
