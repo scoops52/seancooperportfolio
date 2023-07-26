@@ -39,7 +39,8 @@ function ContactForm() {
   };
 
   const form = useRef<any>(null);
-    const handleCaptchaChange = (token: string) => {
+    const handleCaptchaChange = (token: string | null) => {
+        if (token)
         setCaptchaToken(token);
     }
     const sendEmail = (e: { preventDefault: () => void; }) => {
