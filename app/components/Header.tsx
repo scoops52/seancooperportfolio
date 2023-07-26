@@ -8,7 +8,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const navItems = ["about", "portfolio", "skills", "contact"]
+  const navItems = ["about", "skills", "portfolio", "contact"]
 
 
   useEffect(() => {
@@ -47,12 +47,12 @@ function Header() {
                     </li>
                 ))}
                 <li className='mx-4 hover:text-gray-300'>
-                    <Link href='/about'>
+                    <Link href='https://www.linkedin.com/in/sean-cooper-software-engineer/' target='_blank'>
                         <FaLinkedin size={24} />
                     </Link>
             </li>
             <li className='mx-4 hover:text-gray-300'>
-                    <Link href='/about'>
+                    <Link href='https://github.com/scoops52' target='_blank'>
                         <FaGithub size={24} />
                     </Link>
             </li>

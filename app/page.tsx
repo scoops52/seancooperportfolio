@@ -13,6 +13,7 @@ import MiloModal from "./components/MiloModal";
 import TaskrModal from "./components/TaskrModal";
 import LizModal from "./components/LizModal";
 import TaskrMobileModal from "./components/TaskrMobileModal";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   const [miloModal, setMiloModal] = useState(false);
@@ -69,7 +70,7 @@ export default function Home() {
               a Frontend Engineer.
             </h2>
             <div className="flex flex-row justify-center items-center space-x-4 mt-8">
-              <div className="relative">
+              <div className="relative hidden lg:block">
                 <Image
                   src="/laptopScreen.png"
                   alt="laptop and mobile phone"
@@ -85,11 +86,17 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
         </div>
+        <div id="about">
         <About />
+        </div>
+        <div id="skills">
         <Skills />
+        </div>
       </div>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:flex-wrap items-center my-12">
+
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 md:flex-wrap items-center pt-20" id="portfolio">
         <div className="w-full h-full flex justify-center items-center">
           <button className="w-full h-full p-4" onClick={handleOpenMiloModal}>
             <MiloProjectCard />
@@ -120,6 +127,10 @@ export default function Home() {
         <TaskrMobileModal isOpen={taskrMobileModal} onClose={handleCloseTaskrMobileModal} />
 
        
+      </div>
+      <div id="contact" className="flex flex-col w-full justify-center items-center p-8 bg-gray-100" >
+        <h2 className="text-3xl md:text-5xl leading-none font-raleway text-gray-800 p-5">Contact Me</h2>
+      <ContactForm />
       </div>
     </>
   );

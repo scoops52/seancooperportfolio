@@ -39,18 +39,18 @@ export function Tooltip({ text, children }: TooltipProps) {
 
 function Skills() {
   return (
-    <div className="bg-gray-300 flex flex-col w-full justify-center items-center p-8">
-      <h1 className="text-3xl md:text-4xl p-2 text-gray-900 font-raleway leading-none">
+    <div className="bg-gray-300 flex flex-col w-full justify-center items-center p-8 pt-11 container">
+      <h1 className="text-3xl md:text-4xl p-6 text-gray-900 font-raleway leading-none">
         Technical Skills
       </h1>
       <p>(Hover for tech name)</p>
       <div className="flex flex-col justify-between">
         <div className="flex items-center space-x-4">
-          <h2 className="text-xl md:text-2xl leading-none font-raleway text-gray-800">
+          <h2 className="text-xl md:text-2xl leading-none font-raleway text-gray-800 hidden md:block">
             Specializing In:
           </h2>
           <div className="flex flex-row items-center space-x-4 p-5">
-            <ul className="flex items-center">
+            <ul className="flex items-center flex-wrap">
               <li className="mx-4 hover:text-gray-300">
                 <Tooltip text="HTML5">
                   <AiOutlineHtml5 size={35} />
@@ -94,11 +94,11 @@ function Skills() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <h2 className="text-xl md:text-2xl leading-none font-raleway text-gray-800">
-            Experience In:
+        <div className="flex items-center">
+          <h2 className="text-xl md:text-2xl leading-none font-raleway text-gray-800 hidden md:block">
+            Experience With:
           </h2>
-          <div className="flex flex-row items-center space-x-4 p-5">
+          <div className="flex flex-row items-center p-5">
             <ul className="flex items-center">
               <li className="mx-4 hover:text-gray-300">
                 <Tooltip text="Tailwind CSS">
@@ -133,9 +133,9 @@ function Skills() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <h2 className="text-xl md:text-2xl leading-none font-raleway text-gray-800">
-            Currently Learning:
+        <div className="flex items-center space-x-20">
+          <h2 className="text-xl md:text-2xl leading-none font-raleway text-gray-800 hidden md:block">
+            Learning:
           </h2>
           <div className="flex flex-row gap-5 items-center space-x-4 p-5">
             <ul className="flex items-center">
