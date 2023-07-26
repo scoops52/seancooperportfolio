@@ -38,7 +38,7 @@ function ContactForm() {
       : setMessageBorderColor("border-red-400");
   };
 
-  const form = useRef<HTMLFormElement | null>(null);
+  const form = useRef<any>(null);
     const handleCaptchaChange = (token: string) => {
         setCaptchaToken(token);
     }
