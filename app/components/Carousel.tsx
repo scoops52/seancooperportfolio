@@ -20,7 +20,7 @@ function Carousel({ slides, imageSize }: CarouselProps) {
 
   return (
     
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden" id='about'>
         <div className="flex transition-transform ease-out duration-500"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >

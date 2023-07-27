@@ -88,10 +88,10 @@ export default function Home() {
           </div>
           
         </div>
-        <div id="about">
+        <div>
         <About />
         </div>
-        <div id="skills">
+        <div>
         <Skills />
         </div>
       </div>

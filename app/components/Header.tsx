@@ -16,12 +16,9 @@ function Header() {
     const targetId = href?.replace(/.*\#/, "");
     if (!targetId) return;
     const targetElement = document.getElementById(targetId);
-    window.scrollTo({
-      top: targetElement?.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-  }
+    targetElement?.scrollIntoView({ behavior: "smooth" });
 
+  };
 
   useEffect(() => {
     const handleScroll = () => {
