@@ -10,6 +10,18 @@ function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const navItems = ["about", "skills", "portfolio", "contact"]
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute("href");
+    const targetId = href?.replace(/.*\#/, "");
+    if (!targetId) return;
+    const targetElement = document.getElementById(targetId);
+    window.scrollTo({
+      top: targetElement?.getBoundingClientRect().top,
+      behavior: "smooth",
+    });
+  }
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +55,7 @@ function Header() {
             <ul className='flex items-center'>
                 {navItems.map((item, index) => (
                     <li key={index} className='mx-4 hover:text-gray-300'>
-                        <Link href={`#${item}`}>{item}</Link>
+                        <Link href={`#${item}`} onClick={handleScroll}>{item}</Link>
                     </li>
                 ))}
                 <li className='mx-4 hover:text-gray-300'>
